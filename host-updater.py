@@ -12,7 +12,7 @@ import shutil
 import re
 
 
-URLS = ['http://someonewhocares.org/hosts/hosts', 'http://hosts-file.net/download/hosts.txt']
+URLS = ['http://someonewhocares.org/hosts/hosts', 'http://hosts-file.net/download/hosts.txt', 'http://winhelp2002.mvps.org/hosts.txt']
 HOST_LOCATION = '/etc/hosts'
 
 
@@ -72,6 +72,7 @@ def get_host_files():
         hosts.append(data)
     for host in hosts:
         host = re.sub('\r', '', host)
+        host = re.sub('0\.0\.0\.0', '127.0.0.1', host)
         host = host.split('\n')
         edit.append(host)
     return edit
