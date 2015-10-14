@@ -14,7 +14,7 @@ Features
 Usage
 -----
 
-- Append the URLS array to your believes.
+- Extend the URLS array to your believes.
 - Run `sudo ./host-updater.py`
 
 
