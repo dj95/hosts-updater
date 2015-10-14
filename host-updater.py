@@ -7,6 +7,7 @@
 
 import urllib.request
 import subprocess
+import platform
 import shutil
 import re
 
@@ -77,13 +78,21 @@ def get_host_files():
 
 
 def reboot():
-    subprocess.Popen(['shutdown', '-r', 'now'])
-    return
+    os = platform.system()
+    if os == 'Linux':
+        subprocess.Popen(['shutdown', '-r', 'now'])
+        return
+    elif os == 'Windows':
+        subprocess.Popen(['shutdown', '-r', '-t', '00'])
+        return
+    elif os == 'Darwin':
+        subprocess.Popen(['shutdown', '-r', 'now'])
+        return
 
 
 def main():
     print('Host File Updater\n\n')
-    
+
     new_hosts = []
     new_hosts_ed = get_host_files()
     for host in new_hosts_ed:
