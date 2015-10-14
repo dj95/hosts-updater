@@ -11,6 +11,12 @@ Features
 - Able to reboot your pc after updating your hosts
 
 
+Requierments
+------------
+
+- `python-urllib3`
+
+
 Usage
 -----
 
