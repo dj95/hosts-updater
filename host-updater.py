@@ -3,6 +3,7 @@
 # Updates the host file with given urls
 #
 # © 2015 Daniel Jankowski
+# Licensed under the GNU Lesser General Public License Version 3(LGPLv3).
 
 import urllib.request
 import subprocess
