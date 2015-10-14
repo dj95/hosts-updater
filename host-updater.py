@@ -109,7 +109,7 @@ def main():
         append_to_hosts(addition)
 
         print('\nDo you want to reboot? [y/n]\n')
-        choice = input('>')
+        choice = input('> ')
         if choice.lower() == 'y':
             reboot()
         else:
