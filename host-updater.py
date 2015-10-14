@@ -12,7 +12,7 @@ import shutil
 import re
 
 
-URLS = ['http://someonewhocares.org/hosts/hosts', 'http://pastebin.com/raw.php?i=6Z8kwQEL']
+URLS = ['http://someonewhocares.org/hosts/hosts', 'http://hosts-file.net/download/hosts.txt']
 HOST_LOCATION = '/etc/hosts'
 
 
